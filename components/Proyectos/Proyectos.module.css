@@ -1,0 +1,127 @@
+.proyectosContainer {
+  position: absolute;
+  z-index: 3;
+}
+
+.proyectos {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__atras {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+    background-color: transparent;
+    background-image: url("/images/flecha.png");
+    background-size: contain;
+    cursor: pointer;
+    transition: 0.2s;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &:active {
+      scale: 1;
+    }
+
+    @media (--large) {
+      top: 50px;
+      left: 50px;
+    }
+  }
+
+  &__tira {
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    height: 20%;
+    background: none;
+    border: none;
+    transition: 0.2s;
+    z-index: 2;
+
+    @media (--large) {
+      top: -40px;
+      right: 200px;
+      height: 30%;
+      max-height: 300px;
+      min-height: 200px;
+    }
+
+    &:hover {
+      top: -20px;
+    }
+
+    &:active {
+      scale: 0.9;
+    }
+
+    & img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__titulo {
+    font-family: "Anton", sans-serif;
+    font-size: 18px;
+    color: var(--grey);
+    letter-spacing: 12.8px;
+    text-transform: uppercase;
+    width: 100%;
+    margin-left: 60px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+    @media (--large) {
+      width: fit-content;
+      margin-left: 0;
+      margin-bottom: 50px;
+      font-size: 28px;
+    }
+  }
+
+  &__swiper {
+    width: 100vw;
+    height: 70%;
+
+    :global(.swiper-button-prev) {
+      color: var(--grey);
+    }
+    :global(.swiper-button-next) {
+      color: var(--grey);
+    }
+
+    &__slide {
+      display: flex;
+      justify-content: center;
+      background-color: var(--black);
+
+      & img {
+        width: fit-content;
+        height: 100%;
+        object-fit: contain;
+        transition: 0.2s;
+
+        &:hover {
+          scale: 1.1;
+        }
+
+        &:active {
+          scale: 1;
+        }
+      }
+    }
+  }
+}

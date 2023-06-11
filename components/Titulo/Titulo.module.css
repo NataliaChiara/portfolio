@@ -1,0 +1,13 @@
+.titulo {
+  font-family: "Anton", sans-serif;
+  font-size: 58px;
+  color: var(--grey);
+  line-height: 1.1;
+  letter-spacing: 2px;
+  width: 250px;
+
+  @media (--large) {
+    font-size: 88px;
+    width: fit-content;
+  }
+}

@@ -1,0 +1,141 @@
+.contactoContainer {
+  position: absolute;
+  z-index: 1;
+}
+
+.contacto {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (--large) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__atras {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+    background-color: transparent;
+    background-image: url("/images/flecha.png");
+    background-size: contain;
+    cursor: pointer;
+    transition: 0.2s;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &:active {
+      scale: 1;
+    }
+
+    @media (--large) {
+      top: 50px;
+      left: 50px;
+    }
+  }
+
+  &__tituloMobile {
+    display: block;
+    font-family: "Anton", sans-serif;
+    font-size: 18px;
+    color: var(--grey);
+    letter-spacing: 12.8px;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+
+    @media (--large) {
+      display: none;
+    }
+  }
+
+  &__redes {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-right: 30px;
+
+    @media (--large) {
+      margin-left: 10vw;
+      padding-right: 0px;
+    }
+
+    &__row {
+      & button {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        border: none;
+        background-color: var(--blue);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0.2s;
+
+        &:hover {
+          scale: 1.1;
+        }
+
+        &:active {
+          scale: 1;
+        }
+
+        @media (--large) {
+          width: 45px;
+          height: 45px;
+        }
+      }
+
+      &__linkedin {
+        background-image: url("/icons/linkedin.svg");
+      }
+
+      &__github {
+        background-image: url("/icons/github.svg");
+      }
+
+      & a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        color: var(--grey);
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.2s;
+        text-decoration: none;
+
+        &:hover {
+          font-weight: bold;
+        }
+
+        &:active {
+          scale: 0.9;
+        }
+
+        @media (--large) {
+          font-size: 20px;
+          gap: 50px;
+        }
+      }
+    }
+  }
+
+  &__titulo {
+    display: none;
+
+    @media (--large) {
+      display: block;
+    }
+  }
+}
